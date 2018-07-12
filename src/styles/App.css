@@ -1,0 +1,33 @@
+.board {
+  width: 90vh;
+  height: 90vh;
+  margin: 0 auto;
+  max-height: 90vw;
+  max-width: 90vw;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  align-items: stretch;
+}
+
+.box {
+  background-color: lightgrey;
+  padding: 1px;
+  margin: 0;
+}
+
+.box:not(:nth-child(3n)) {
+  border-right: 1px solid black;
+}
+
+.box:not(:nth-child(n+7)) {
+  border-bottom: 1px solid black;
+}
+
+.box.x {
+  background-color: green;
+}
+
+.box.o {
+  background-color: red;
+}
